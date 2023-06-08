@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R. O. Logistics</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        .foot{
+            position: absolute;
+            /* right: 15%;
+            bottom: 90px; */
+            transform: translate(250px, -640px);
+        }
+    </style>
+</head>
+<body class="font-[Poppins] bg-[#ECF8F9] ">
+    <header class="bg-[#9BA4B5]">
+        <nav class="z-50 bg-[#394867] flex items-center justify-around mx-auto py-3">
+            <div class="z-50 flex flex-row items-center justify-around w-[60%] md:static absolute md:min-h-fit min-h-[15vh] left-0  px-5 me-10">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-20">
+                    <li>
+                        <a href="#" class="text-white text-xl"><i class="bi bi-telephone"></i> +91 9693959874</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white text-xl"><i class="bi bi-envelope"></i> rologistics@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="z-50 flex items-center justify-evenly md:w-[15%] md:flex-row flex-col ms-40">
+                <a href="#" class="border-1 hover:bg-[#25D366] px-2 py-1 hover:rounded-lg"><i class="bi bi-whatsapp text-white text-xl"></i></a>
+                <a href="#" class="border-1 hover:bg-gradient-to-bl from-[#F44747] to-[#EEDC31] px-2 py-1 hover:rounded-lg"><i class="bi bi-instagram text-white text-xl"></i></a>
+                <a href="#" class="border-1 hover:bg-gradient-to-br from-[#1778F2] to-[#8B9DC3] px-2 py-1 hover:rounded-lg"><i class="bi bi-facebook text-white text-xl"></i></a>
+            </div>
+        </nav>
+        <nav class="flex items-center justify-around w-[92%] mx-auto py-2">
+            <div class="z-50">
+                <img src="../images/logo.jpeg" class="w-16 bg-transparent md:mx-5 my-2 mx-0" alt="">
+                <!--  28%-->
+            </div>
+            <div class="navLinks md:z-50 -z-10 duration-300 md:static absolute bg-[#9BA4B5] md:min-h-fit min-h-[55vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-20 gap-8">
+                    <li>
+                        <a class="hover:bg-[#374259] text-xl hover:text-white px-5 py-2 hover:rounded-md" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="hover:bg-[#374259] text-xl hover:text-white px-5 py-2 hover:rounded-md" href="about.html">AboutUs</a>
+                    </li>
+                    <li>
+                        <a class="hover:bg-[#374259] text-xl hover:text-white px-5 py-2 hover:rounded-md" href="#">Services</a>
+                    </li>
+                    <li>
+                        <a class="hover:bg-[#374259] text-xl hover:text-white px-5 py-2 hover:rounded-md" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-10 z-50">
+                <button class="bg-[#374259] border-2 px-5 py-2 text-center rounded-md text-white hover:bg-[#ECF8F9] hover:text-[#374259] hover:border-2 border-[#374259]">Get A Free Quote</button>
+                <i class="bi bi-list text-4xl cursor-pointer md:hidden" onclick="onToggleMenu(this)" id="menu"></i>
+                <i class="bi bi-x-circle text-4xl cursor-pointer hidden" onclick="onToggleMenu(this)" id="cross"></i>
+            </div>
+        </nav>
+    </header>
+    <script>
+        var navLinks = document.querySelector(".navLinks");
+        var cross = document.getElementById('cross');
+        var menu = document.getElementById('menu');
+
+        function onToggleMenu()
+        {
+            if(cross.classList.contains('hidden'))
+            {
+                cross.classList.remove('hidden');
+                menu.classList.add('hidden');
+                navLinks.classList.toggle('top-[28%]')
+            }
+            else
+            {
+                menu.classList.remove('hidden');
+                cross.classList.add('hidden');
+                navLinks.classList.remove('top-[28%]');
+                navLinks.classList.add('top-[-100%]');
+            }
+            
+        }
+    </script>
+    
+    <br><br><br><br><br><br><br><br><br><br>
+    <footer>
+        <div class="p-10 bg-[#374259]">
+            <div class="max-w-7xl mx-auto">
+                <div class="row col-span-12 gap-2 flex justify-between items-start text-white mt-20">
+                    <div class="mb-5 col-span-3 flex flex-col items-center">
+                        <h4 class="text-xl">Quick Links:</h4>
+                            <h4>Home</h4>
+                            <h4>About Us</h4>
+                            <h4>Services</h4>
+                            <h4>Contacts</h4>
+                            <h4>Privacy Policy</h4>
+                    </div>
+                    <div class="mb-5 col-span-3 flex flex-col items-center">
+                        <h4 class="text-xl">Our Locations:</h4>
+                            <h4>Bangalore</h4>
+                            <h4>Ahmedabad</h4>
+                            <h4>Vadodra</h4>
+                            <h4>Pune</h4>
+                            <h4>Mumbai</h4>
+                    </div>
+                    <div class="mb-5 col-span-3 flex flex-col items-center">
+                        <h4 class="text-xl">Services:</h4>
+                            <h4>Road Transpoartation</h4>
+                            <h4>Full Load Truck</h4>
+                            <h4>Part Load Truck</h4>
+                            <h4>Cargo Storage</h4>                        
+                    </div>
+                    <div class="mb-5 w-64 flex flex-col items-center">
+                        <h4 class="text-xl">Contact Us:</h4>
+                        <p><i class="bi bi-geo-alt-fill"></i> Ashok Nagar, Balkum Naka, Thane(W)-400608</p>
+                        <h4><i class="bi bi-telephone"></i> +91 9693959874</h4>
+                        <h4><i class="bi bi-envelope"></i> rologistics@gmail.com</h4>
+                    </div>
+                </div>
+                <div class="flex items-center justify-evenly md:w-[15%] md:flex-row flex-col mt-20 mx-auto">
+                    <a href="#" class="hover:bg-[#25D366] px-3 py-2 rounded-lg border-2 me-2"><i class="bi bi-whatsapp text-white text-2xl"></i></a>
+                    <a href="#" class="hover:bg-gradient-to-bl from-[#84173E] to-[#EEDC31] px-3 py-2 rounded-lg border-2 me-2"><i class="bi bi-instagram text-white text-2xl"></i></a>
+                    <a href="#" class="hover:bg-gradient-to-br from-[#1778F2] to-[#8B9DC3] px-3 py-2 rounded-lg border-2 me-2"><i class="bi bi-facebook text-white text-2xl"></i></a>
+                    <a href="#" class="hover:bg-[#0077B5] px-3 py-2 rounded-lg border-2"><i class="bi bi-linkedin text-white text-2xl"></i></a>
+                </div>
+                <hr class="mt-10">
+                <div class="mx-auto mt-10 max-w-2xl">
+                    <h2 class="text-lg text-white">© rologistics.in I All Rights Reserved I Designed by SEO Engineers Agency</h2>
+                </div>
+            </div>
+            
+        </div>
+        <div class="foot rounded-lg shadow-2xl z-50 bg-[#ECF8F9] w-[69%] ">
+            <div class="bg-[#ECF8F9] grid grid-cols-2 px-5 py-10 items-center rounded-lg  mx-auto ">
+                <div>
+                    <h1 class="text-3xl">For Any Inquiry Please Contact Us</h1>
+                    <h4 class="text-lg">"We Deliver Your Dreams, Not Just Your Logistic."</h4>
+                </div>
+                <div class="text-center">
+                    <button class="bg-[#374259] border-2 px-5 py-2 text-center rounded-md text-white hover:bg-[#ECF8F9] hover:text-[#374259] hover:border-2 border-[#374259]">Call Now</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

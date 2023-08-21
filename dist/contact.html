@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R. O. Logistics</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        .foot{
+            position: absolute;
+            /* right: 15%;
+            bottom: 90px; */
+            transform: translate(250px, -640px);
+        }
+
+        .line1
+        {
+            background-color: #374259;
+            width: 150px;
+            height: 3px;
+            margin: 0 auto;
+        }
+
+        .pop:hover
+        {
+            border-bottom: 15px solid #9BA4B5 !important;
+            transform: scale(1.03);
+            transition: all 0.3s;
+            color: #374259;
+        }
+
+        .pop2:hover{
+            transform: scale(1.08);
+            transition: all 0.3s;
+        }
+
+        .plane{
+            transform: rotate(90deg);
+        }
+
+        .faq{
+            max-width: 500px;
+            margin-top: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #374259;
+            cursor: pointer;
+        }
+
+        .ques{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .ans{
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1.5s ease;
+        }
+
+        .faq.on .ans{
+            max-height: fit-content ;
+            animation: fade 1s ease-in-out;
+        }
+
+        .ans p{
+            padding-top: 1rem;
+            width: 500px;
+            line-height: 1.3;
+            font-size: large;
+        }
+
+        .faq.on svg{
+            transform: rotate(180deg);
+        }
+
+        svg{
+            transition: transform .5s ease-in;
+        }
+
+        @keyframes fade {
+            from{
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0px);
+
+            }
+        }
+
+        @media screen and (max-width: 1079) {
+            .film{
+                height: 200px !important;
+            }
+        }
+        
+    </style>
+</head>
+<body class="font-[Poppins] bg-[#ECF8F9] ">
+    <header class="bg-[#9BA4B5]">
+        <nav class="z-50 bg-[#394867] flex items-center justify-around mx-auto py-3">
+            <div class="z-50 flex flex-row items-center justify-around w-[60%] md:static absolute md:min-h-fit min-h-[15vh] left-0  px-5 me-10">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-20">
+                    <li>
+                        <a href="#" class="text-white text-xl"><i class="bi bi-telephone"></i> +91 9693959874</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white text-xl"><i class="bi bi-envelope"></i> rologistics@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="z-50 flex items-center justify-evenly md:w-[15%] md:flex-row flex-col ms-40">
+                <a href="#" class="border-1 hover:bg-[#25D366] px-2 py-1 hover:rounded-lg"><i class="bi bi-whatsapp text-white text-xl"></i></a>
+                <a href="#" class="border-1 hover:bg-gradient-to-bl from-[#F44747] to-[#EEDC31] px-2 py-1 hover:rounded-lg"><i class="bi bi-instagram text-white text-xl"></i></a>
+                <a href="#" class="border-1 hover:bg-gradient-to-br from-[#1778F2] to-[#8B9DC3] px-2 py-1 hover:rounded-lg"><i class="bi bi-facebook text-white text-xl"></i></a>
+            </div>
+        </nav>
+        <nav class="flex items-center justify-around w-[92%] mx-auto py-2">
+            <div class="z-50">
+                <img src="../images/logo.jpeg" class="w-16 bg-transparent md:mx-5 my-2 mx-0" alt="">
+                <!--  28%-->
+            </div>
+            <div class="navLinks md:z-50 -z-10 duration-300 md:static absolute bg-[#9BA4B5] md:min-h-fit min-h-[55vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-20 gap-8">
+                    <li>
+                        <a class="hover:bg-[#374259] text-xl hover:text-white px-5 py-2 hover:rounded-md" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="hover:bg-[#374259] text-xl hover:text-white px-5 py-2 hover:rounded-md" href="about.html">AboutUs</a>
+                    </li>
+                    <li>
+                        <a class="hover:bg-[#374259] text-xl hover:text-white px-5 py-2 hover:rounded-md" href="services.html">Services</a>
+                    </li>
+                    <li>
+                        <a class="bg-[#374259] text-xl text-white px-5 py-2 rounded-md" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-10 z-50">
+                <button class="bg-[#374259] border-2 px-5 py-2 text-center rounded-md text-white hover:bg-[#ECF8F9] hover:text-[#374259] hover:border-2 border-[#374259]">Get A Free Quote</button>
+                <i class="bi bi-list text-4xl cursor-pointer md:hidden" onclick="onToggleMenu(this)" id="menu"></i>
+                <i class="bi bi-x-circle text-4xl cursor-pointer hidden" onclick="onToggleMenu(this)" id="cross"></i>
+            </div>
+        </nav>
+    </header>
+    
+
+    <!-- Banner -->
+    <div class="container px-lg-4 w-full ">
+        <img src="../images/logistics/2.png" class="w-full block object-cover h-[600px]" alt=""/>
+    </div>
+    
+    <div class="absolute  top-[350px] left-[550px] z-50 text-white font-[Inter]">
+        <div>
+            <!-- <h2 class="text-left text-3xl font-bold">R O Logistics</h2><br> -->
+            <h2 class="text-center text-7xl font-black">Contact Us</h2><br>
+            <h2 class="text-center text-lg font-semibold">Home >> Contact Us</h2><br><br>
+            <!-- <button class="bg-[#335fbe] border-2 px-5 py-2 text-center rounded-md text-white hover:bg-[#ECF8F9] hover:text-[#335fbe] hover:border-2 border-[#335fbe]">Contact Us</button> -->
+        </div>
+    </div>
+
+    <div class="rounded-md bg-[#374259] -top-[40px] z-50 mx-auto w-fit px-5 py-5 align-middle text-center text-white relative">
+        <h1 class="text-3xl"><i class="bi bi-telephone-fill"></i> +91 9693959874</h1>
+    </div>
+
+    <!-- Need Help? -->
+    <div>
+        <h2 class="mt-4 pt-4 mb-4 text-center font-bold text-[#374259] font-[Inter] text-5xl">Need Help?</h2>
+        <div class="line1"></div>
+        <h2 class="mt-5 text-center font-black text-6xl text-[#2b3449]">Our Office Location</h2>
+        <h2 class="mt-5 text-center font-bold text-4xl text-[#2b3449]">Let’s get in touch to know more about our services or any query in detail.</h2>
+        <div class="my-28">
+            <div class="grid grid-cols-2  items-stretch align-middle justify-center text-[#374259]">
+                <div class="bg-white text-center shadow-lg px-10 py-5 ms-28 me-2">
+                    <h1 class="text-5xl mb-10">Address</h1>
+                    <div class="mb-5 flex flex-col items-start justify-evenly">
+                        <h4 class="text-4xl text-center mb-8">Contact Us:</h4>
+                        <p class="text-2xl my-2"><i class="bi bi-geo-alt-fill me-2"></i> Ashok Nagar, Balkum Naka,<br>Thane(W)-400608</p>
+                        <h4 class="text-2xl my-2"><i class="bi bi-telephone me-2"></i> +91 9693959874</h4>
+                        <h4 class="text-2xl my-2"><i class="bi bi-envelope me-2"></i> rologistics@gmail.com</h4>
+                        <h4 class="text-2xl my-2"><i class="bi bi-alarm me-2"></i> Mon - Fri: 9:00 - 21:00</h4>
+                    </div>
+                </div>
+                <div class="bg-white text-center shadow-lg px-10 py-5 me-28 ms-2 ">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.4071424008066!2d72.98896233110236!3d19.22107988563687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7beb2c995c319%3A0x9e1f273bd9c86e3c!2sAshok%20Nagar%2C%20Devram%20Nagar%2C%20Balkum%20Pada%2C%20Majiwada%2C%20Thane%2C%20Maharashtra%20400607%2C%20India!5e0!3m2!1sen!2sus!4v1691256260986!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inquiry Form -->
+    <div>
+        <h2 class="mt-4 pt-4 mb-4 text-center font-bold text-[#374259] font-[Inter] text-5xl">Inquiry Form</h2>
+        <div class="line1 "></div>
+        <div class="w-1/2 px-4 mx-auto my-10">
+            <div class="p-4 bg-[#9BA4B5] rounded-md">
+                <h2 class="text-4xl text-[#374259] text-center font-semibold mb-2">Contact Us</h2>
+              <form id="contact_form">
+                <div class="grid grid-cols-1 mb-5 mx-20 font-semibold">
+                    <div class="mb-5 mx-0">
+                        <label for="name_field" class="block text-2xl text-[#374259]">Your Name:</label>
+                        <input class="rounded border-[#374259] w-full" type="text" name="name" id="name_field" />
+                    </div>
+                    <div class="mb-5 mx-0">
+                        <label for="email_field" class="block text-2xl text-[#374259]">Email Address:</label>
+                        <input class="rounded border-[#374259] w-full" type="email" name="email" id="email_field" />
+                    </div>
+                    <div class="mb-5 mx-0">
+                        <label for="email_field" class="block text-2xl text-[#374259]">Email Address:</label>
+                        <input class="rounded border-[#374259] w-full" type="email" name="email" id="email_field" />
+                    </div>
+                    <div class="mb-5">
+                        <label for="message_field" class="block text-2xl text-[#374259]">Message:</label>
+                        <textarea class="w-full rounded border-[#374259]" name="message" id="message_field" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="bg-[#374259] text-lg w-1/4 mx-auto py-2 px-4 rounded border-[#374259] shadow-sm text-white hover:text-[#374259] hover:bg-white" >Send</button>
+
+                    
+                </div>
+                
+                
+              </form>
+              </div>
+        </div>
+    </div>
+
+    <!-- Office Adresses -->
+    <div>
+        <h2 class="mt-4 pt-4 mb-4 text-center font-bold text-[#374259] font-[Inter] text-5xl">Branch Office Address</h2>
+        <div class="line1 "></div>
+
+        <div class="my-28">
+            <div class="grid grid-cols-3 items-center align-middle justify-center text-[#374259]">
+                <div class="bg-white pop text-center shadow-lg px-10 py-5 rounded-md mx-5 my-5 h-[200px]">
+                    <h1 class="text-3xl">Bangalore</h1>
+                    <h3 class="text-justify">35 Near Govt School Vittasandra Bangalore-560068</h3>
+                </div>
+                <div class="bg-white pop text-center shadow-lg px-10 py-5 rounded-md mx-5 my-5 h-[200px]">
+                    <h1 class="text-3xl">Ahmedabad</h1>
+                    <h3 class="text-justify">A/7 Gopinath Estate Behind M Chandulal Building Aslali Ahmedabad- 382427</h3>
+                </div>
+                <div class="bg-white pop text-center shadow-lg px-10 py-5 rounded-md mx-5 my-5 h-[200px]">
+                    <h1 class="text-3xl">Vadodara</h1>
+                    <h3 class="text-justify">104, Sayaji Market, Near APMC, Sayajipura, Vadodara-22.</h3>
+                </div>
+                <div class="bg-white pop text-center shadow-lg px-10 py-5 rounded-md mx-5 my-5 h-[200px]">
+                    <h1 class="text-3xl">Mumbai</h1>
+                    <h3 class="text-justify">Ashok Nagar, Balkum Naka, Thane(W)-400608</h3>
+                </div>
+                <div class="bg-white pop text-center shadow-lg px-10 py-5 rounded-md mx-5 my-5 h-[200px]">
+                    <h1 class="text-3xl">Pune</h1>
+                    <h3 class="text-justify">C-2, S. No.23 Brahma Estate, Near Jyoti Restaurant NIBM Rd, Guru Nanak Nagar, Kondhwa, Pune, Maharashtra 411 048</h3>
+                </div>
+                <div class="bg-white pop text-center shadow-lg px-10 py-5 rounded-md mx-5 my-5 h-[200px]">
+                    <h1 class="text-3xl">Pune</h1>
+                    <h3 class="text-justify">First Floor, Gat no 44 at Village Chimbli, Taluka Haveli, Dist Pune 410501</h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    
+    <footer>
+        <div class="p-10 bg-[#374259]">
+            <div class="max-w-7xl mx-auto">
+                <div class="row col-span-12 gap-2 flex justify-between items-start text-white mt-20">
+                    <div class="mb-5 col-span-3 flex flex-col items-center">
+                        <h4 class="text-xl">Quick Links:</h4>
+                            <h4>Home</h4>
+                            <h4>About Us</h4>
+                            <h4>Services</h4>
+                            <h4>Contacts</h4>
+                            <h4>Privacy Policy</h4>
+                    </div>
+                    <div class="mb-5 col-span-3 flex flex-col items-center">
+                        <h4 class="text-xl">Our Locations:</h4>
+                            <h4>Bangalore</h4>
+                            <h4>Ahmedabad</h4>
+                            <h4>Vadodra</h4>
+                            <h4>Pune</h4>
+                            <h4>Mumbai</h4>
+                    </div>
+                    <div class="mb-5 col-span-3 flex flex-col items-center">
+                        <h4 class="text-xl">Services:</h4>
+                            <h4>Road Transpoartation</h4>
+                            <h4>Full Load Truck</h4>
+                            <h4>Part Load Truck</h4>
+                            <h4>Cargo Storage</h4>                        
+                    </div>
+                    <div class="mb-5 w-64 flex flex-col items-center">
+                        <h4 class="text-xl">Contact Us:</h4>
+                        <p><i class="bi bi-geo-alt-fill"></i> Ashok Nagar, Balkum Naka, Thane(W)-400608</p>
+                        <h4><i class="bi bi-telephone"></i> +91 9693959874</h4>
+                        <h4><i class="bi bi-envelope"></i> rologistics@gmail.com</h4>
+                    </div>
+                </div>
+                <div class="flex items-center justify-evenly md:w-[15%] md:flex-row flex-col mt-20 mx-auto">
+                    <a href="#" class="hover:bg-[#25D366] px-3 py-2 rounded-lg border-2 me-2"><i class="bi bi-whatsapp text-white text-2xl"></i></a>
+                    <a href="#" class="hover:bg-gradient-to-bl from-[#84173E] to-[#EEDC31] px-3 py-2 rounded-lg border-2 me-2"><i class="bi bi-instagram text-white text-2xl"></i></a>
+                    <a href="#" class="hover:bg-gradient-to-br from-[#1778F2] to-[#8B9DC3] px-3 py-2 rounded-lg border-2 me-2"><i class="bi bi-facebook text-white text-2xl"></i></a>
+                    <a href="#" class="hover:bg-[#0077B5] px-3 py-2 rounded-lg border-2"><i class="bi bi-linkedin text-white text-2xl"></i></a>
+                </div>
+                <hr class="mt-10">
+                <div class="mx-auto mt-10 max-w-2xl">
+                    <h2 class="text-lg text-white">© rologistics.in I All Rights Reserved I Designed by SEO Engineers Agency</h2>
+                </div>
+            </div>
+            
+        </div>
+        <div class="foot rounded-lg shadow-2xl z-50 bg-[#ECF8F9] w-[69%] ">
+            <div class="bg-[#ECF8F9] grid grid-cols-2 px-5 py-10 items-center rounded-lg  mx-auto ">
+                <div>
+                    <h1 class="text-3xl">For Any Inquiry Please Contact Us</h1>
+                    <h4 class="text-lg">"We Deliver Your Dreams, Not Just Your Logistic."</h4>
+                </div>
+                <div class="text-center">
+                    <button class="bg-[#374259] border-2 px-5 py-2 text-center rounded-md text-white hover:bg-[#ECF8F9] hover:text-[#374259] hover:border-2 border-[#374259]">Call Now</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+
+        let faqs = document.querySelectorAll('.faq');
+
+        // function toggleFaq(){
+        //     console.log("Clicked");
+        //     faqs.classList.toggle("on");
+        // }
+
+        faqs.forEach(faq => {
+            faq.addEventListener('click', () => {
+                faq.classList.toggle("on");
+                console.log("Clicked");
+                // toggleFaq(faq);
+            });
+        });
+
+        
+
+        var navLinks = document.querySelector(".navLinks");
+        var cross = document.getElementById('cross');
+        var menu = document.getElementById('menu');
+
+        function onToggleMenu()
+        {
+            if(cross.classList.contains('hidden'))
+            {
+                cross.classList.remove('hidden');
+                menu.classList.add('hidden');
+                navLinks.classList.toggle('top-[28%]')
+            }
+            else
+            {
+                menu.classList.remove('hidden');
+                cross.classList.add('hidden');
+                navLinks.classList.remove('top-[28%]');
+                navLinks.classList.add('top-[-100%]');
+            }
+            
+        };
+
+        var swiper = new Swiper(".swiper-container", {
+        spaceBetween: 30,
+        effect: "fade",
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        zoom: {
+            maxRatio: 1.2,
+            minRation: 1,
+        },
+
+      });
+    //   swiper.on("slideChangeTransitionStart", swiper.zoom.out);
+      swiper.on("slideChangeTransitionEnd", swiper.zoom.in);
+
+      var swiper = new Swiper(".swiper-testimonials", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        slidesPerView: "3",
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            640: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            }
+        }
+      });
+
+      var swiper = new Swiper(".Swiper3", {
+        loop: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        effect: "creative",
+        creativeEffect: {
+            prev: {
+            shadow: true,
+            translate: ["-120%", 0, -500],
+            },
+            next: {
+            shadow: true,
+            translate: ["120%", 0, -500],
+            },
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+        },
+    });
+
+    </script>
+</body>
+</html>

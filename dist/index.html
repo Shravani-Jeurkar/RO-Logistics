@@ -21,6 +21,90 @@
             bottom: 90px; */
             transform: translate(250px, -640px);
         }
+
+        .line1
+        {
+            background-color: #374259;
+            width: 150px;
+            height: 3px;
+            margin: 0 auto;
+        }
+
+        .pop:hover
+        {
+            border-bottom: 15px solid #9BA4B5 !important;
+            transform: scale(1.03);
+            transition: all 0.3s;
+            color: #374259;
+        }
+
+        .pop2:hover{
+            transform: scale(1.08);
+            transition: all 0.3s;
+        }
+
+        .plane{
+            transform: rotate(90deg);
+        }
+
+        .faq{
+            max-width: 500px;
+            margin-top: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #374259;
+            cursor: pointer;
+        }
+
+        .ques{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .ans{
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1.5s ease;
+        }
+
+        .faq.on .ans{
+            max-height: fit-content ;
+            animation: fade 1s ease-in-out;
+        }
+
+        .ans p{
+            padding-top: 1rem;
+            width: 500px;
+            line-height: 1.3;
+            font-size: large;
+        }
+
+        .faq.on svg{
+            transform: rotate(180deg);
+        }
+
+        svg{
+            transition: transform .5s ease-in;
+        }
+
+        @keyframes fade {
+            from{
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0px);
+
+            }
+        }
+
+        @media screen and (max-width: 1079) {
+            .film{
+                height: 200px !important;
+            }
+        }
+        
     </style>
 </head>
 <body class="font-[Poppins] bg-[#ECF8F9] ">
@@ -50,16 +134,16 @@
             <div class="navLinks md:z-50 -z-10 duration-300 md:static absolute bg-[#9BA4B5] md:min-h-fit min-h-[55vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
                 <ul class="flex md:flex-row flex-col md:items-center md:gap-20 gap-8">
                     <li>
-                        <a class="hover:bg-[#374259] text-xl hover:text-white px-5 py-2 hover:rounded-md" href="index.html">Home</a>
+                        <a class="bg-[#374259] text-xl text-white px-5 py-2 rounded-md" href="index.html">Home</a>
                     </li>
                     <li>
                         <a class="hover:bg-[#374259] text-xl hover:text-white px-5 py-2 hover:rounded-md" href="about.html">AboutUs</a>
                     </li>
                     <li>
-                        <a class="hover:bg-[#374259] text-xl hover:text-white px-5 py-2 hover:rounded-md" href="#">Services</a>
+                        <a class="hover:bg-[#374259] text-xl hover:text-white px-5 py-2 hover:rounded-md" href="services.html">Services</a>
                     </li>
                     <li>
-                        <a class="hover:bg-[#374259] text-xl hover:text-white px-5 py-2 hover:rounded-md" href="#">Contact</a>
+                        <a class="hover:bg-[#374259] text-xl hover:text-white px-5 py-2 hover:rounded-md" href="contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -70,31 +154,344 @@
             </div>
         </nav>
     </header>
-    <script>
-        var navLinks = document.querySelector(".navLinks");
-        var cross = document.getElementById('cross');
-        var menu = document.getElementById('menu');
-
-        function onToggleMenu()
-        {
-            if(cross.classList.contains('hidden'))
-            {
-                cross.classList.remove('hidden');
-                menu.classList.add('hidden');
-                navLinks.classList.toggle('top-[28%]')
-            }
-            else
-            {
-                menu.classList.remove('hidden');
-                cross.classList.add('hidden');
-                navLinks.classList.remove('top-[28%]');
-                navLinks.classList.add('top-[-100%]');
-            }
-            
-        }
-    </script>
     
-    <br><br><br><br><br><br><br><br><br><br>
+
+    <!-- Carousel -->
+    <div class="container px-lg-4 w-full ">
+        <div class="swiper swiper-container w-full me-0">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide cursor-default w-full">
+                    <div class="swiper-zoom-container cursor-default w-full">
+                        <img src="../images/log/8.png" class="w-full block" alt=""/>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container cursor-default">
+                        <img src="../images/log/9.png" class="w-full block h-[50%]" alt=""/>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container cursor-default">
+                        <img src="../images/log/8.png" class="w-full block h-[50%]" alt=""/>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container cursor-default">
+                        <img src="../images/log/9.png" class="w-full h-[50%] block" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="bg-[#606C5D] film opacity-60 relative lg:bottom-[808.85px] film z-50 lg:h-[809px]"></div> -->
+    </div>
+    
+    <div class="absolute bottom-[550px] top-56 left-5 z-50 text-white font-[Inter]">
+        <div>
+            <h2 class="text-left text-3xl font-bold">R O Logistics</h2><br>
+            <h2 class="text-left text-7xl font-extrabold">Best Transport & <br>Logistic Company</h2><br>
+            <h2 class="text-left text-lg font-semibold">We provide you with the most efficient, best-quality and on-time delivery logistics services.</h2><br><br>
+            <button class="bg-[#335fbe] border-2 px-5 py-2 text-center rounded-md text-white hover:bg-[#ECF8F9] hover:text-[#335fbe] hover:border-2 border-[#335fbe]">Contact Us</button>
+        </div>
+    </div>
+
+    <div class="rounded-md bg-[#374259] -top-[40px] z-50 mx-auto w-fit px-5 py-5 align-middle text-center text-white relative">
+        <h1 class="text-3xl"><i class="bi bi-telephone-fill"></i> +91 9693959874</h1>
+    </div>
+
+    <!-- Carousel 2 -->
+    <div class="">
+        <h2 class="mt-4 pt-4 mb-4 text-center font-bold text-[#374259] font-[Inter] text-5xl">Our Consumers</h2>
+        <div class="line1"></div>
+        <div class="container mt-5 w-full mx-auto">
+            <div class="swiper swiper-testimonials">
+                <div class="swiper-wrapper mb-5">
+                    <div class="swiper-slide bg-white p-4 max-h-56">
+                        <img src="../images/logos/infosys-logo-jpeg.jpg" class="w-full p-4"  alt="" >
+                    </div> 
+                    <div class="swiper-slide bg-white max-h-56">
+                        <img src="../images/logos/Wipro_Primary Logo_Color_RGB.svg" class=" h-[21rem] mx-auto mt-[-54px]"  alt="" >
+                    </div>
+                    <div class="swiper-slide bg-white p-4 max-h-56">
+                        <img src="../images/logos/amazon-logo-inverse.svg" class="w-full p-4"  alt="" >
+                    </div> 
+                </div>
+                <br>
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- <div class="col-lg-12 text-center mt-5">
+                <a href="" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">Know More</a>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div class="">
+        <h2 class="mt-4 pt-4 mb-4 text-center font-bold text-[#374259] font-[Inter] text-5xl">Our Service</h2>
+        <div class="line1"></div>
+        <h2 class="mt-5 text-center font-black text-6xl text-[#2b3449]">Your Logistic Service Partner</h2>
+
+        <div class="container mt-10 mx-auto w-fit">
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
+                <div class="mb-5 px-4">
+                    <div class="pop bg-[#374259] rounded-[25px] shadow text-white leading-8 p-4 hover:bg-lime-50 md:h-[400px] sm:h-fit lg:h-[450px]">
+                        <div class="flex justify-items-start mb-2 flex-col">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-20">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+                            </svg>
+                              
+                            <h5 class="m-0 ms-3 text-left text-2xl mb-4">Road Transport</h5>  
+                        </div>
+                        <p class="text-justify text-lg px-4">We provide a wide range of land transportation services 24x7 to any location. Our efficient local and national land transportation service makes sure that items arrive on schedule and in good condition.</p>
+                    </div>
+                </div>
+                <div class="mb-5 px-4">
+                    <div class="pop bg-[#374259] rounded-[25px] shadow text-white leading-8 p-4 hover:bg-lime-50 md:h-[400px] sm:h-fit lg:h-[450px]">
+                        <div class="flex justify-items-start mb-2 flex-col">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-20">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+                            </svg>
+                              
+                            <h5 class="m-0 ms-3 text-left text-2xl mb-4">Full Load Truck</h5>  
+                        </div>
+                        <p class="text-justify text-lg px-4">Full truck loads are almost always the fastest and safest option to move heavy freight. This is true because only during loading and unloading will the goods be handled, and they will be on a specific vehicle.</p>
+                    </div>
+                </div>
+                <div class="mb-5 px-4">
+                    <div class="pop bg-[#374259] rounded-[25px] shadow text-white leading-8 p-4 hover:bg-lime-50 md:h-[400px] sm:h-fit lg:h-[450px]">
+                        <div class="flex justify-items-start mb-2 flex-col">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-20 ">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z" />
+                            </svg>
+                            <h5 class="m-0 ms-3 text-left text-2xl mb-4">Part Load Truck</h5>  
+                        </div>
+                        <p class="text-justify text-lg px-4">PTL makes it simple to transport various items of clients in one vehicle. This enables numerous shippers to split their load and pay for the specific area that they occupy, making it an affordable way to move products.</p>
+                    </div>
+                </div>
+                <div class="mb-5 px-4">
+                    <div class="pop bg-[#374259] rounded-[25px] shadow text-white leading-8 p-4 hover:bg-lime-50 md:h-[400px] sm:h-fit lg:h-[450px]">
+                        <div class="flex justify-items-start mb-2 flex-col">
+                            <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="w-16 bi bi-box2 mt-2 ms-2 mb-2 font-extrabold" viewBox="0 0 16 16">
+                                <path d="M2.95.4a1 1 0 0 1 .8-.4h8.5a1 1 0 0 1 .8.4l2.85 3.8a.5.5 0 0 1 .1.3V15a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4.5a.5.5 0 0 1 .1-.3L2.95.4ZM7.5 1H3.75L1.5 4h6V1Zm1 0v3h6l-2.25-3H8.5ZM15 5H1v10h14V5Z"/>
+                            </svg>
+                              
+                            <h5 class="m-0 ms-3 text-left text-2xl mb-4">Cargo Storage</h5>  
+                        </div>
+                        <p class="text-justify text-lg px-4">R. O. Logistics is a top Logistic Company in India, provides a wide selection of tech-based warehousing solutions that are all 100% customised to match the unique demands of your company.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div class="">
+        <h2 class="mt-4 pt-4 mb-4 text-center font-bold text-[#374259] font-[Inter] text-5xl">About Us</h2>
+        <div class="line1 "></div>
+        <div class=" mx-auto">
+            <div class="grid grid-cols-2 items-center mt-5">
+                <div class="mx-auto border-[25px] border-[#374259] rounded-md">
+                    <img src="../images/logistics/1.jpg" class="relative left-24 top-24" width="350" alt="">
+                </div>
+                <div class="pe-10">
+                    <h2 class="leading-[55px] text-5xl font-bold text-[#374259] ">Simplify Your Logistics, Amplify Your Success With Our Efficient Logistics Services.</h2>
+                    <p class="mt-4 text-justify text-lg text-[#374259]">We are a trusted logistics partner that provides customized solutions to meet your unique business needs. With years of experience in the industry, we have established ourselves as a reliable and efficient logistics provider. <br>
+                        <br>Our staff at C2C Logistics will organise every aspect of each road shipment, from the optimal route to the required vehicle. With the use of readily available vehicles of all sizes and forms, we can deliver anything from small courier vans to low loaders, tail lift trucks, box and curtain-sided vehicles, and skeleton trucks that can carry especially huge or odd items.
+                    </p>
+                    <div class="grid grid-cols-2 mx-auto mt-5 text-[#374259] text-lg">
+                        <div class=" px-10"><i class="bi bi-check-circle-fill"></i> On Time Delivery</div>
+                        <div class=" px-10"><i class="bi bi-check-circle-fill"></i> Tracking Service</div>
+                        <div class=" px-10"><i class="bi bi-check-circle-fill"></i> Safe Delivery</div>
+                        <div class=" px-10"><i class="bi bi-check-circle-fill"></i> Affordable Pricing</div>
+                        <div class=" px-10"><i class="bi bi-check-circle-fill"></i> 100% Customer Satisfaction</div>
+                        <div class=" px-10"><i class="bi bi-check-circle-fill"></i> 24/7 Support</div>
+                    </div>
+                    <button class="bg-[#374259] border-2 px-5 py-2 mt-12 ms-56 text-center rounded-md text-white hover:bg-[#ECF8F9] hover:text-[#374259] hover:border-2 border-[#374259]">Know more</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <!-- Why Choose Us -->
+    <div>
+        <h2 class="mt-24 pt-4 mb-4 text-center font-bold text-[#374259] font-[Inter] text-5xl">Why Choose Us</h2>
+        <div class="line1 "></div>
+        <div class=" mx-auto">
+            <div class="grid grid-cols-2 items-center mt-5">
+                
+                <div class="ps-10 ">
+                    <h2 class="leading-[55px] text-5xl font-bold text-[#374259] ">Fast, Reliable, And Always On Point.</h2>
+                    <div class="grid grid-cols-1 mx-auto mt-5 text-[#374259] text-lg">
+                        <div class="bg-white px-5 py-5 text-[#374259] mb-10">
+                            <h1 class="text-3xl text-center font-bold">Modern Shipping</h1>
+                            <p class="mt-2 text-justify flex align-middle">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="pop2 mb-5 mr-5 w-[400px] bg-[#374259] text-white rounded-md h-[110px]">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+                                </svg>
+                                Our logistics business is equipped with the latest technology and software to provide advanced shipping solutions to our clients. We use cutting-edge logistics technology to streamline our operations and enhance the efficiency of our shipping processes.</p>
+                        </div>
+                        <div class="bg-white px-5 py-5 text-[#374259] mb-10">
+                            <h1 class="text-3xl text-center font-bold">Modern Shipping</h1>
+                            <p class="mt-2 text-justify flex align-middle">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="pop2 mb-5 mr-5 w-[400px] bg-[#374259] text-white rounded-md h-[110px]">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                                </svg>                                  
+                                Our logistics business is equipped with the latest technology and software to provide advanced shipping solutions to our clients. We use cutting-edge logistics technology to streamline our operations and enhance the efficiency of our shipping processes.</p>
+                        </div>
+                        <div class="bg-white px-5 py-5 text-[#374259] mb-10">
+                            <h1 class="text-3xl text-center font-bold">Modern Shipping</h1>
+                            <p class="mt-2 text-justify flex align-middle">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="pop2 mb-5 mr-5 w-[400px] bg-[#374259] text-white rounded-md h-[110px]">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                                </svg>                                  
+                                Our logistics business is equipped with the latest technology and software to provide advanced shipping solutions to our clients. We use cutting-edge logistics technology to streamline our operations and enhance the efficiency of our shipping processes.</p>
+                        </div>
+                    </div>
+                    <!-- <button class="bg-[#374259] border-2 px-5 py-2 mt-12 ms-56 text-center rounded-md text-white hover:bg-[#ECF8F9] hover:text-[#374259] hover:border-2 border-[#374259]">Know more</button> -->
+                </div>
+                <div>
+                    <div class="w-[400px] ms-[180px] pop2">
+                        <img src="..\images\logistics\How-road-freight-transport-can-help-achieve-climate-goals-1-1.jpg" alt="">
+                    </div>
+                    <div class="w-[400px] border-white border-[20px] ms-[70px] relative bottom-[65px] pop2 z-10">
+                        <img src="..\images\logistics\fulfillment-mobile-1.jpg" alt="">
+                    </div>
+                    <div class="w-[400px] relative bottom-28 z-0 ms-[180px] pop2">
+                        <img src="..\images\logistics\logistics-company-in-india-1-1-1-1.png" alt="">
+                    </div>
+
+                </div>
+                <!-- <div class="mx-auto border-[25px] border-[#374259] rounded-md">
+                    <img src="../images/logistics/1.jpg" class="relative left-24 top-24" width="350" alt="">
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Have a Question? -->
+    <div>
+        <h2 class="mt-24 pt-4 mb-4 text-center font-bold text-[#374259] font-[Inter] text-5xl">Have a Question??</h2>
+        <div class="line1 "></div>
+        <div class=" mx-auto">
+            <div class="grid grid-cols-2 items-center mt-5">
+                <div class="bg-[#374259] w-[500px] h-[500px]">
+                    <img src="../images\logistics\istockphoto-1396129008-170667a-1-1-1-1-1-1-1-1.png" class="border-white border-[20px] relative top-[75px] left-[100px]" alt="">
+                </div>
+                <div>
+                    <div class="ps-10 ">
+                        <h2 class="leading-[55px] text-5xl font-bold text-[#374259] w-[500px]">Frequently Asked Questions</h2>
+                    </div>
+                    <div class="text-center flex flex-col align-middle">
+                        <div class="faq ">
+                            <div class="ques">
+                                <h3 class="text-xl font-bold">Can I speak by telephone with your specialist?</h3>
+                                <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div class="ans">
+                                <p class="text-justify">Yes, you can talk to our specialists if you have any inquiries at our customer support number, i.e., +91 8094808061.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq" >
+                            <div class="ques">
+                                <h3 class="text-xl font-bold">Where is the company location?</h3>
+                                <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div class="ans">
+                                <p class="text-justify">Our head office location is in Mumbai, and we also have branches in other parts of the country, like Bangalore, Pune, Ahemdabad, and Vadodra.
+    
+                                    Head Office:- Ashok Nagar, Balkum Naka, Thane(W)-400608
+                                    
+                                    Bangalore Office:- 35 Near Govt School Vittasandra Bangalore-560068
+                                    
+                                    Ahmedabad Office:-
+                                    Address : A/7 Gopinath Estate Behind M Chandulal Building Aslali Ahmedabad- 382427
+                                    
+                                    Vadodara Address:-
+                                    104, Sayaji Market, Near APMC, Sayajipura, Vadodara-22.
+                                    Pune Office Address:
+                                    C-2, S. No.23 Brahma Estate, Near Jyoti Restaurant NIBM Rd, Guru Nanak Nagar, Kondhwa, Pune, Maharashtra 411 048</p>
+                            </div>
+                        </div>
+
+                        <div class="faq">
+                            <div class="ques">
+                                <h3 class="text-xl font-bold">Is there any refund if I am not satisfied?</h3>
+                                <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div class="ans">
+                                <p class="text-justify">Yes, you can talk to our specialists if you have any inquiries at our customer support number, i.e., +91 8094808061.</p>
+                            </div>
+                        </div>
+
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h2 class="mt-24 pt-4 mb-4 text-center font-bold text-[#374259] font-[Inter] text-5xl">Clients Review</h2>
+        <div class="line1 "></div>
+        <div class=" mx-auto">
+            <div class="grid grid-cols-2 items-center mt-5">
+                <div class="ps-10 ">
+                    <h2 class="leading-[55px] text-5xl font-bold text-[#374259] ">What Our Clients Says</h2>
+                    <div>
+                        <!-- Swiper -->
+                        <div class="swiper Swiper3">
+                            <div class="swiper-wrapper my-5">
+                                <div class="swiper-slide bg-white p-4 h-[500px] rounded-lg w-fit ms-5 me-6">
+                                    <p class="text-justify">I am the owner of a small business and I need to make sure that my inventory is safe and secure. I had been looking for a good location to store it, and then I found your company. Great service with affordable rates and safe and secure storage.</p>
+                                    <div class="flex items-center text-[#374259] justify-around">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-quote text-[#374259]" viewBox="0 0 16 16">
+                                            <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/>
+                                        </svg>
+                                        <h1 class="text-center text-xl font-bold">NAME</h1>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide bg-white p-4 h-[500px] rounded-lg w-fit ms-5 me-6">
+                                    <p class="text-justify">I am the owner of a small business and I need to make sure that my inventory is safe and secure. I had been looking for a good location to store it, and then I found your company. Great service with affordable rates and safe and secure storage.</p>
+                                    <div class="flex items-center text-[#374259] justify-around">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-quote text-[#374259]" viewBox="0 0 16 16">
+                                            <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/>
+                                        </svg>
+                                        <h1 class="text-center text-xl font-bold">NAME</h1>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide bg-white p-4 h-[500px] rounded-lg w-fit ms-5 me-6">
+                                    <p class="text-justify">I am the owner of a small business and I need to make sure that my inventory is safe and secure. I had been looking for a good location to store it, and then I found your company. Great service with affordable rates and safe and secure storage.</p>
+                                    <div class="flex items-center text-[#374259] justify-around">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-quote text-[#374259]" viewBox="0 0 16 16">
+                                            <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/>
+                                        </svg>
+                                        <h1 class="text-center text-xl font-bold">NAME</h1>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="mx-auto border-[25px] border-[#374259] rounded-md">
+                    <img src="../images/logistics/1.jpg" class="relative right-24 top-24" width="350" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br>
     <footer>
         <div class="p-10 bg-[#374259]">
             <div class="max-w-7xl mx-auto">
@@ -154,6 +551,128 @@
             </div>
         </div>
     </footer>
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+
+        let faqs = document.querySelectorAll('.faq');
+
+        // function toggleFaq(){
+        //     console.log("Clicked");
+        //     faqs.classList.toggle("on");
+        // }
+
+        faqs.forEach(faq => {
+            faq.addEventListener('click', () => {
+                faq.classList.toggle("on");
+                console.log("Clicked");
+                // toggleFaq(faq);
+            });
+        });
+
+        
+
+        var navLinks = document.querySelector(".navLinks");
+        var cross = document.getElementById('cross');
+        var menu = document.getElementById('menu');
+
+        function onToggleMenu()
+        {
+            if(cross.classList.contains('hidden'))
+            {
+                cross.classList.remove('hidden');
+                menu.classList.add('hidden');
+                navLinks.classList.toggle('top-[28%]')
+            }
+            else
+            {
+                menu.classList.remove('hidden');
+                cross.classList.add('hidden');
+                navLinks.classList.remove('top-[28%]');
+                navLinks.classList.add('top-[-100%]');
+            }
+            
+        };
+
+        var swiper = new Swiper(".swiper-container", {
+        spaceBetween: 30,
+        effect: "fade",
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        zoom: {
+            maxRatio: 1.2,
+            minRation: 1,
+        },
+
+      });
+    //   swiper.on("slideChangeTransitionStart", swiper.zoom.out);
+      swiper.on("slideChangeTransitionEnd", swiper.zoom.in);
+
+      var swiper = new Swiper(".swiper-testimonials", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        slidesPerView: "3",
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            640: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            }
+        }
+      });
+
+      var swiper = new Swiper(".Swiper3", {
+        loop: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        effect: "creative",
+        creativeEffect: {
+            prev: {
+            shadow: true,
+            translate: ["-120%", 0, -500],
+            },
+            next: {
+            shadow: true,
+            translate: ["120%", 0, -500],
+            },
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+        },
+    });
+
+    </script>
 </body>
 </html>

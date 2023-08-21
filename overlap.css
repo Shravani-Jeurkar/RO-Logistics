@@ -1,0 +1,51 @@
+.overlap {
+    float: left;
+    width: 200px;
+    border-radius: 5px;
+    height: 350px;
+    border-color: aquamarine;
+    border-width: 20px;
+    border-style: solid;
+    margin: 50px 0px 0px 150px;
+}
+
+.oimg {
+    border-width: 0px;
+    margin: 50px 0px 0px 60px;
+}
+
+.right {
+    /* float: right; */
+    margin: 25px 200px 0px 550px;
+}
+
+hr.divide1 {
+    border: 0;
+    border-top: 1px solid teal;
+    width: 50px;
+    margin: 0;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid teal;
+}
+
+.button1:hover {
+    background-color: teal;
+    color: white;
+}

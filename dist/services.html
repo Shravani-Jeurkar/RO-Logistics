@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R. O. Logistics</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        .foot{
+            position: absolute;
+            /* right: 15%;
+            bottom: 90px; */
+            transform: translate(250px, -640px);
+        }
+
+        .line1
+        {
+            background-color: #374259;
+            width: 150px;
+            height: 3px;
+            margin: 0 auto;
+        }
+
+        .pop:hover
+        {
+            border-bottom: 15px solid #9BA4B5 !important;
+            transform: scale(1.03);
+            transition: all 0.3s;
+            color: #374259;
+        }
+
+        .pop2:hover{
+            transform: scale(1.08);
+            transition: all 0.3s;
+        }
+
+        .plane{
+            transform: rotate(90deg);
+        }
+
+        .faq{
+            max-width: 500px;
+            margin-top: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #374259;
+            cursor: pointer;
+        }
+
+        .ques{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .ans{
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1.5s ease;
+        }
+
+        .faq.on .ans{
+            max-height: fit-content ;
+            animation: fade 1s ease-in-out;
+        }
+
+        .ans p{
+            padding-top: 1rem;
+            width: 500px;
+            line-height: 1.3;
+            font-size: large;
+        }
+
+        .faq.on svg{
+            transform: rotate(180deg);
+        }
+
+        svg{
+            transition: transform .5s ease-in;
+        }
+
+        @keyframes fade {
+            from{
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0px);
+
+            }
+        }
+
+        @media screen and (max-width: 1079) {
+            .film{
+                height: 200px !important;
+            }
+        }
+        
+    </style>
+</head>
+<body class="font-[Poppins] bg-[#ECF8F9] ">
+    <header class="bg-[#9BA4B5]">
+        <nav class="z-50 bg-[#394867] flex items-center justify-around mx-auto py-3">
+            <div class="z-50 flex flex-row items-center justify-around w-[60%] md:static absolute md:min-h-fit min-h-[15vh] left-0  px-5 me-10">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-20">
+                    <li>
+                        <a href="#" class="text-white text-xl"><i class="bi bi-telephone"></i> +91 9693959874</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white text-xl"><i class="bi bi-envelope"></i> rologistics@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="z-50 flex items-center justify-evenly md:w-[15%] md:flex-row flex-col ms-40">
+                <a href="#" class="border-1 hover:bg-[#25D366] px-2 py-1 hover:rounded-lg"><i class="bi bi-whatsapp text-white text-xl"></i></a>
+                <a href="#" class="border-1 hover:bg-gradient-to-bl from-[#F44747] to-[#EEDC31] px-2 py-1 hover:rounded-lg"><i class="bi bi-instagram text-white text-xl"></i></a>
+                <a href="#" class="border-1 hover:bg-gradient-to-br from-[#1778F2] to-[#8B9DC3] px-2 py-1 hover:rounded-lg"><i class="bi bi-facebook text-white text-xl"></i></a>
+            </div>
+        </nav>
+        <nav class="flex items-center justify-around w-[92%] mx-auto py-2">
+            <div class="z-50">
+                <img src="../images/logo.jpeg" class="w-16 bg-transparent md:mx-5 my-2 mx-0" alt="">
+                <!--  28%-->
+            </div>
+            <div class="navLinks md:z-50 -z-10 duration-300 md:static absolute bg-[#9BA4B5] md:min-h-fit min-h-[55vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-20 gap-8">
+                    <li>
+                        <a class="hover:bg-[#374259] text-xl hover:text-white px-5 py-2 hover:rounded-md" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="hover:bg-[#374259] text-xl hover:text-white px-5 py-2 hover:rounded-md" href="about.html">AboutUs</a>
+                    </li>
+                    <li>
+                        <a class="bg-[#374259] text-xl text-white px-5 py-2 rounded-md" href="services.html">Services</a>
+                    </li>
+                    <li>
+                        <a class="hover:bg-[#374259] text-xl hover:text-white px-5 py-2 hover:rounded-md" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-10 z-50">
+                <button class="bg-[#374259] border-2 px-5 py-2 text-center rounded-md text-white hover:bg-[#ECF8F9] hover:text-[#374259] hover:border-2 border-[#374259]">Get A Free Quote</button>
+                <i class="bi bi-list text-4xl cursor-pointer md:hidden" onclick="onToggleMenu(this)" id="menu"></i>
+                <i class="bi bi-x-circle text-4xl cursor-pointer hidden" onclick="onToggleMenu(this)" id="cross"></i>
+            </div>
+        </nav>
+    </header>
+    
+
+    <!-- Banner -->
+    <div class="container px-lg-4 w-full ">
+        <img src="../images/log/8.png" class="w-full block object-cover h-[600px]" alt=""/>
+    </div>
+    
+    <div class="absolute  top-[350px] left-[380px] z-50 text-white font-[Inter]">
+        <div>
+            <!-- <h2 class="text-left text-3xl font-bold">R O Logistics</h2><br> -->
+            <h2 class="text-center text-5xl font-black">Fast And Trusted Logistics Services</h2><br>
+            <h2 class="text-center text-lg font-semibold">From pickup to delivery, we ensure the safe and secure transportation of your goods.</h2><br><br>
+            <!-- <button class="bg-[#335fbe] border-2 px-5 py-2 text-center rounded-md text-white hover:bg-[#ECF8F9] hover:text-[#335fbe] hover:border-2 border-[#335fbe]">Contact Us</button> -->
+        </div>
+    </div>
+
+    <div class="rounded-md bg-[#374259] -top-[40px] z-50 mx-auto w-fit px-5 py-5 align-middle text-center text-white relative">
+        <h1 class="text-3xl"><i class="bi bi-telephone-fill"></i> +91 9693959874</h1>
+    </div>
+
+    <!-- Services -->
+    <div class="">
+        <h2 class="mt-4 pt-4 mb-4 text-center font-bold text-[#374259] font-[Inter] text-5xl">Our Services</h2>
+        <div class="line1"></div>
+
+        <div class="container mt-10 mx-auto w-fit">
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
+                <div class="mb-5 px-4">
+                    <div class="pop text-[#374259] rounded-[25px] shadow bg-white leading-8 p-4 hover:bg-lime-50 md:h-[500px] sm:h-fit lg:h-[550px]">
+                        <img src="../images\logistics\130689780-white-truck-is-on-highway-business-commercial-cargo-transportation-concept-clear-and-blank-space-on-transformed-1-1-1024x683.png" class=" object-cover rounded-[25px]  h-[250px]" alt="">
+                        <h5 class="m-0 ms-3 text-left text-2xl mb-4">Road Transport</h5>  
+                        <p class="text-justify text-lg px-4">We provide a wide range of land transportation services 24x7 to any location. Our efficient local and national land transportation service makes sure that items arrive on schedule and in good condition.</p>
+                    </div>
+                </div>
+                <div class="mb-5 px-4">
+                    <div class="pop text-[#374259] rounded-[25px] shadow bg-white leading-8 p-4 hover:bg-lime-50 md:h-[500px] sm:h-fit lg:h-[550px]">                            
+                        <img src="../images\logistics\diesel-big-rigs-1024x538.jpg" class="object-cover rounded-[25px] top-0 h-[250px]" alt="">
+                        <h5 class="m-0 ms-3 text-left text-2xl mb-4">Full Load Truck</h5>  
+                        <p class="text-justify text-lg px-4">Full truck loads are almost always the fastest and safest option to move heavy freight. This is true because only during loading and unloading will the goods be handled, and they will be on a specific vehicle.</p>
+                    </div>
+                </div>
+                <div class="mb-5 px-4">
+                    <div class="pop text-[#374259] rounded-[25px] shadow bg-white leading-8 p-4 hover:bg-lime-50 md:h-[500px] sm:h-fit lg:h-[550px]">
+                        <img src="../images\logistics\How-road-freight-transport-can-help-achieve-climate-goals-1-1.jpg" class="object-cover rounded-[25px] top-0 h-[250px]" alt="">
+                        <h5 class="m-0 ms-3 text-left text-2xl mb-4">Part Load Truck</h5>  
+                        <p class="text-justify text-lg px-4">PTL makes it simple to transport various items of clients in one vehicle. This enables numerous shippers to split their load and pay for the specific area that they occupy, making it an affordable way to move products.</p>
+                    </div>
+                </div>
+                <div class="mb-5 px-4">
+                    <div class="pop text-[#374259] rounded-[25px] shadow bg-white leading-8 p-4 hover:bg-lime-50 md:h-[500px] sm:h-fit lg:h-[550px]">
+                        <img src="../images\logistics\photo-1586528116311-ad8dd3c8310d-1-1-1.png" class="object-cover rounded-[25px] top-0 h-[250px]" alt="">  
+                        <h5 class="m-0 ms-3 text-left text-2xl mb-4">Cargo Storage</h5>  
+                        <p class="text-justify text-lg px-4">R. O. Logistics is a top Logistic Company in India, provides a wide selection of tech-based warehousing solutions that are all 100% customised to match the unique demands of your company.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section -->
+    <div class="flex h-[300px] bg-[#374259] my-20 rounded-md text-white align-middle items-center justify-evenly px-2 w-auto">
+        <div class="ps-5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-safe2 ms-10" viewBox="0 0 16 16">
+                <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h12A1.5 1.5 0 0 1 16 2.5v12a1.5 1.5 0 0 1-1.5 1.5h-12A1.5 1.5 0 0 1 1 14.5V14H.5a.5.5 0 0 1 0-1H1V9H.5a.5.5 0 0 1 0-1H1V4H.5a.5.5 0 0 1 0-1H1v-.5zM2.5 2a.5.5 0 0 0-.5.5v12a.5.5 0 0 0 .5.5h12a.5.5 0 0 0 .5-.5v-12a.5.5 0 0 0-.5-.5h-12z"/>
+                <path d="M5.035 8h1.528c.047-.184.12-.357.214-.516l-1.08-1.08A3.482 3.482 0 0 0 5.035 8zm1.369-2.303 1.08 1.08c.16-.094.332-.167.516-.214V5.035a3.482 3.482 0 0 0-1.596.662zM9 5.035v1.528c.184.047.357.12.516.214l1.08-1.08A3.482 3.482 0 0 0 9 5.035zm2.303 1.369-1.08 1.08c.094.16.167.332.214.516h1.528a3.483 3.483 0 0 0-.662-1.596zM11.965 9h-1.528c-.047.184-.12.357-.214.516l1.08 1.08A3.483 3.483 0 0 0 11.965 9zm-1.369 2.303-1.08-1.08c-.16.094-.332.167-.516.214v1.528a3.483 3.483 0 0 0 1.596-.662zM8 11.965v-1.528a1.989 1.989 0 0 1-.516-.214l-1.08 1.08A3.483 3.483 0 0 0 8 11.965zm-2.303-1.369 1.08-1.08A1.988 1.988 0 0 1 6.563 9H5.035c.085.593.319 1.138.662 1.596zM4 8.5a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0zm4.5-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+            </svg>
+            <h2 class="ms-2 mt-8 text-3xl text-center">100 +</h2>
+            <p>Corporates Dealing</p>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-patch-check ms-10" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                <path d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911l-1.318.016z"/>
+            </svg>
+            <h2 class="ms-2 mt-8 text-3xl text-center">2,600 +</h2>
+            <p>Satisfied Clients</p>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-people ms-8" viewBox="0 0 16 16">
+                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/>
+            </svg>
+            <h2 class="ms-2 mt-8 text-3xl text-center">250 +</h2>
+            <p>Team Members</p>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-graph-up-arrow ms-10" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5Z"/>
+            </svg>
+            <h2 class="ms-2 mt-8 text-3xl text-center">150 +</h2>
+            <p>Pan India Location</p>
+        </div>
+        
+        
+    </div>
+
+    <!-- Carousel 2 Consumers-->
+    <div class="mb-10 pb-10">
+        <h2 class="mt-4 pt-4 mb-4 text-center font-bold text-[#374259] font-[Inter] text-5xl">Our Consumers</h2>
+        <div class="line1"></div>
+        <div class="container mt-5 w-full mx-auto">
+            <div class="swiper swiper-testimonials">
+                <div class="swiper-wrapper mb-5">
+                    <div class="swiper-slide bg-white p-4 max-h-56">
+                        <img src="../images/logos/infosys-logo-jpeg.jpg" class="w-full p-4"  alt="" >
+                    </div> 
+                    <div class="swiper-slide bg-white max-h-56">
+                        <img src="../images/logos/Wipro_Primary Logo_Color_RGB.svg" class=" h-[21rem] mx-auto mt-[-54px]"  alt="" >
+                    </div>
+                    <div class="swiper-slide bg-white p-4 max-h-56">
+                        <img src="../images/logos/amazon-logo-inverse.svg" class="w-full p-4"  alt="" >
+                    </div> 
+                </div>
+                <br>
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- <div class="col-lg-12 text-center mt-5">
+                <a href="" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">Know More</a>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- Inquiry Form -->
+    <div>
+        <h2 class="mt-4 pt-4 mb-4 text-center font-bold text-[#374259] font-[Inter] text-5xl">Inquiry Form</h2>
+        <div class="line1 "></div>
+        <div class="w-1/2 px-4 mx-auto my-10">
+            <div class="p-4 bg-[#9BA4B5] rounded-md">
+                <h2 class="text-4xl text-[#374259] text-center font-semibold mb-2">Contact Us</h2>
+              <form id="contact_form">
+                <div class="grid grid-cols-1 mb-5 mx-20 font-semibold">
+                    <div class="mb-5 mx-0">
+                        <label for="name_field" class="block text-2xl text-[#374259]">Your Name:</label>
+                        <input class="rounded border-[#374259] w-full" type="text" name="name" id="name_field" />
+                    </div>
+                    <div class="mb-5 mx-0">
+                        <label for="email_field" class="block text-2xl text-[#374259]">Email Address:</label>
+                        <input class="rounded border-[#374259] w-full" type="email" name="email" id="email_field" />
+                    </div>
+                    <div class="mb-5 mx-0">
+                        <label for="email_field" class="block text-2xl text-[#374259]">Email Address:</label>
+                        <input class="rounded border-[#374259] w-full" type="email" name="email" id="email_field" />
+                    </div>
+                    <div class="mb-5">
+                        <label for="message_field" class="block text-2xl text-[#374259]">Message:</label>
+                        <textarea class="w-full rounded border-[#374259]" name="message" id="message_field" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="bg-[#374259] text-lg w-1/4 mx-auto py-2 px-4 rounded border-[#374259] shadow-sm text-white hover:text-[#374259] hover:bg-white" >Send</button>
+
+                    
+                </div>
+                
+                
+              </form>
+              </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div class="">
+        <h2 class="mt-4 pt-4 mb-4 text-center font-bold text-[#374259] font-[Inter] text-5xl">Our Services</h2>
+        <div class="line1 "></div>
+        <h3 class="text-xl font-semibold text-center mt-2 pt-4 mb-8 text-[#374259] font-[Inter]">Services We Provide</h3>
+        <div class=" mx-auto">
+            <div class="grid grid-cols-2 items-center mt-5 mb-36">
+                <div class="px-16 text-[#374259]">
+                    <div class="bg-white text-center shadow-lg px-10 py-5 ms-28 me-2 ">
+                        <h1 class="text-3xl font-bold my-5">Land Transportation</h1>
+                        <h3 class="text-justify py-5">Roads, highways are used by C2C Logistics.  In the field of land freight transportation, C2C   Logistic is an expert. We are a reputable land freight transportation company. To ensure that your deliveries are always made on time, we can handle the complete surface supply chain for you. Our Land freight management service meets the requirements of international forwarding firms.With its vast road network, C2C Logistics offers cutting-edge land freight services that are economical and effective. We provide a wide range of land transportation services 24×7 to any location. Our efficient local and national land transportation service makes sure that items arrive on schedule and in good condition.</h3>
+                    </div>
+                </div>
+                <div class="mx-auto border-[25px] border-[#374259] rounded-md">
+                    <img src="../images\logistics\Untitled-design-2023-03-01T152712.445-1.png" class="relative left-24 top-24" width="350" alt="">
+                </div>
+            </div>
+            <div class="grid grid-cols-2 items-center mt-5 mb-36">
+                <div class="mx-auto border-[25px] border-[#374259] rounded-md">
+                    <img src="../images\logistics\Untitled-design-2023-03-01T160132.199-1-1.png" class="relative left-24 top-24" width="350" alt="">
+                </div>
+                <div class="px-16 text-[#374259]">
+                    <div class="bg-white text-center shadow-lg px-10 py-5 ms-28 me-2 ">
+                        <h1 class="text-3xl font-bold my-5">Full Load Truck</h1>
+                        <h3 class="text-justify py-5">
+                            A sort of transportation method known as full truck load, or FTL, involves using a truck to transport only one specific product. In other words, just one shipment will be allowed on the trip. Less Than Truck Load (LTL), also known as a cargo of less than a full truckload, has a number of advantages over FTL trucking. Whole truckloads are more cost-effective for shipments that are large enough to completely or nearly completely fill a shipping container. Unlike courier transport or LTL, full truckloads are far less constrained by size and weight limits. FTL goods arrive at their destination faster since there are no other pickups or drops along the road for the vehicle. As there is no switching between vehicles in the middle of the journey while using FTL transport, the shipment is more likely to be lost or damaged.</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 items-center mt-5 mb-36">
+                <div class="px-16 text-[#374259]">
+                    <div class="bg-white text-center shadow-lg px-10 py-5 ms-28 me-2 ">
+                        <h1 class="text-3xl font-bold my-5">Part Truck Load</h1>
+                        <h3 class="text-justify py-5">PTL shipment occurs when your load requires a part truck’s space. A truck is used to convey numerous shipments to various shipping sites or logistical hubs while keeping them all together. You do not have to pay any fees to use the part load booking service. You only have to pay for the amount of your load. The shipment may be reloaded onto another vehicle during the part-load transportation process, and that truck will arrange delivery to the consignee’s warehouse. Regardless of the size of your delivery, C2C Logistic, one of the top road transport firms in India, keeps your supply chain going. Your part-load shipment will reach its intended location safely, promptly, and with our expert equipment.</h3>
+                    </div>
+                </div>
+                <div class="mx-auto border-[25px] border-[#374259] rounded-md">
+                    <img src="../images\logistics\Untitled-design-2023-03-01T162013.522-1-1.png" class="relative left-24 top-24" width="350" alt="">
+                </div>
+            </div>
+            <div class="grid grid-cols-2 items-center mt-5 mb-36">
+                <div class="mx-auto border-[25px] border-[#374259] rounded-md">
+                    <img src="../images\logistics\Untitled-design-2023-03-01T154501.252-1-1.png" class="relative left-24 top-24" width="350" alt="">
+                </div>
+                <div class="px-16 text-[#374259]">
+                    <div class="bg-white text-center shadow-lg px-10 py-5 ms-28 me-2 ">
+                        <h1 class="text-3xl font-bold my-5">Cargo Storage</h1>
+                        <h3 class="text-justify py-5">Since warehousing is a critical element of the supply chain, you must choose one of the top warehousing firms in India for your business. A perfect warehousing firm offers a solution that is customised for your organisation and skilled staff to manage your inventory and orders. You don’t need to worry about your inventory or stocking requirements because of their knowledge. It gets simpler to give your main business your undivided attention. C2C is a top  Logistic company in  India, provides a wide selection of tech-based warehousing solutions that are all 100% customised to match the unique demands of your company.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer>
+        <div class="p-10 bg-[#374259]">
+            <div class="max-w-7xl mx-auto">
+                <div class="row col-span-12 gap-2 flex justify-between items-start text-white mt-20">
+                    <div class="mb-5 col-span-3 flex flex-col items-center">
+                        <h4 class="text-xl">Quick Links:</h4>
+                            <h4>Home</h4>
+                            <h4>About Us</h4>
+                            <h4>Services</h4>
+                            <h4>Contacts</h4>
+                            <h4>Privacy Policy</h4>
+                    </div>
+                    <div class="mb-5 col-span-3 flex flex-col items-center">
+                        <h4 class="text-xl">Our Locations:</h4>
+                            <h4>Bangalore</h4>
+                            <h4>Ahmedabad</h4>
+                            <h4>Vadodra</h4>
+                            <h4>Pune</h4>
+                            <h4>Mumbai</h4>
+                    </div>
+                    <div class="mb-5 col-span-3 flex flex-col items-center">
+                        <h4 class="text-xl">Services:</h4>
+                            <h4>Road Transpoartation</h4>
+                            <h4>Full Load Truck</h4>
+                            <h4>Part Load Truck</h4>
+                            <h4>Cargo Storage</h4>                        
+                    </div>
+                    <div class="mb-5 w-64 flex flex-col items-center">
+                        <h4 class="text-xl">Contact Us:</h4>
+                        <p><i class="bi bi-geo-alt-fill"></i> Ashok Nagar, Balkum Naka, Thane(W)-400608</p>
+                        <h4><i class="bi bi-telephone"></i> +91 9693959874</h4>
+                        <h4><i class="bi bi-envelope"></i> rologistics@gmail.com</h4>
+                    </div>
+                </div>
+                <div class="flex items-center justify-evenly md:w-[15%] md:flex-row flex-col mt-20 mx-auto">
+                    <a href="#" class="hover:bg-[#25D366] px-3 py-2 rounded-lg border-2 me-2"><i class="bi bi-whatsapp text-white text-2xl"></i></a>
+                    <a href="#" class="hover:bg-gradient-to-bl from-[#84173E] to-[#EEDC31] px-3 py-2 rounded-lg border-2 me-2"><i class="bi bi-instagram text-white text-2xl"></i></a>
+                    <a href="#" class="hover:bg-gradient-to-br from-[#1778F2] to-[#8B9DC3] px-3 py-2 rounded-lg border-2 me-2"><i class="bi bi-facebook text-white text-2xl"></i></a>
+                    <a href="#" class="hover:bg-[#0077B5] px-3 py-2 rounded-lg border-2"><i class="bi bi-linkedin text-white text-2xl"></i></a>
+                </div>
+                <hr class="mt-10">
+                <div class="mx-auto mt-10 max-w-2xl">
+                    <h2 class="text-lg text-white">© rologistics.in I All Rights Reserved I Designed by SEO Engineers Agency</h2>
+                </div>
+            </div>
+            
+        </div>
+        <div class="foot rounded-lg shadow-2xl z-50 bg-[#ECF8F9] w-[69%] ">
+            <div class="bg-[#ECF8F9] grid grid-cols-2 px-5 py-10 items-center rounded-lg  mx-auto ">
+                <div>
+                    <h1 class="text-3xl">For Any Inquiry Please Contact Us</h1>
+                    <h4 class="text-lg">"We Deliver Your Dreams, Not Just Your Logistic."</h4>
+                </div>
+                <div class="text-center">
+                    <button class="bg-[#374259] border-2 px-5 py-2 text-center rounded-md text-white hover:bg-[#ECF8F9] hover:text-[#374259] hover:border-2 border-[#374259]">Call Now</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+
+        let faqs = document.querySelectorAll('.faq');
+
+        // function toggleFaq(){
+        //     console.log("Clicked");
+        //     faqs.classList.toggle("on");
+        // }
+
+        faqs.forEach(faq => {
+            faq.addEventListener('click', () => {
+                faq.classList.toggle("on");
+                console.log("Clicked");
+                // toggleFaq(faq);
+            });
+        });
+
+        
+
+        var navLinks = document.querySelector(".navLinks");
+        var cross = document.getElementById('cross');
+        var menu = document.getElementById('menu');
+
+        function onToggleMenu()
+        {
+            if(cross.classList.contains('hidden'))
+            {
+                cross.classList.remove('hidden');
+                menu.classList.add('hidden');
+                navLinks.classList.toggle('top-[28%]')
+            }
+            else
+            {
+                menu.classList.remove('hidden');
+                cross.classList.add('hidden');
+                navLinks.classList.remove('top-[28%]');
+                navLinks.classList.add('top-[-100%]');
+            }
+            
+        };
+
+        var swiper = new Swiper(".swiper-container", {
+        spaceBetween: 30,
+        effect: "fade",
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        zoom: {
+            maxRatio: 1.2,
+            minRation: 1,
+        },
+
+      });
+    //   swiper.on("slideChangeTransitionStart", swiper.zoom.out);
+      swiper.on("slideChangeTransitionEnd", swiper.zoom.in);
+
+      var swiper = new Swiper(".swiper-testimonials", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        slidesPerView: "3",
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            640: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            }
+        }
+      });
+
+      var swiper = new Swiper(".Swiper3", {
+        loop: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        effect: "creative",
+        creativeEffect: {
+            prev: {
+            shadow: true,
+            translate: ["-120%", 0, -500],
+            },
+            next: {
+            shadow: true,
+            translate: ["120%", 0, -500],
+            },
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+        },
+    });
+
+    </script>
+</body>
+</html>
